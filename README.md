@@ -35,7 +35,7 @@ mvn clean package docker:build
 
 ## Publish docker image to aws ecr repository
 
-The folloing command:
+The following command:
 
 aws ecr get-login --no-include-email --region us-west-2 
 
@@ -53,7 +53,7 @@ docker tag your_ image_ id your_ aws_ ecr_ repository
 docker push your_ aws_ ecr_ repository
 
 
-## Run terraform template to install contect-service on aws
+## Run terraform template to install your docker image on aws ecs
 
 First create the ssh key called kj_terraform_key
 
