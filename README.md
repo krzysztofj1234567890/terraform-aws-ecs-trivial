@@ -38,16 +38,22 @@ the command above generates a command
 copy and run the command
 
 docker images
-docker tag <your image id> <your aws ecr repository>
-docker push <your aws ecr repository>
+docker tag your_ image_ id your_ aws_ ecr_ repository
+docker push your_ aws_ ecr_ repository
 
 
-## Run terraform tamplate to install contect-service on aws
+## Run terraform template to install contect-service on aws
 
-export AWS_ACCESS_KEY_ID=<your access key>
-export AWS_SECRET_ACCESS_KEY=<your secret key>
+First create the ssh key called kj_terraform_key
+cd keys
+ssh-keygen
+
+Next export variables:
+export AWS_ACCESS_KEY_ID=your_ access_ key
+export AWS_SECRET_ACCESS_KEY=your_ secret_ key
 export AWS_DEFAULT_REGION="us-west-2"
 
+Finnally execute terraform:
 terraform init
 terraform plan
 terraform apply
@@ -55,6 +61,6 @@ terraform apply
 
 ## Test
 
-http://<public ip>:8080/swagger-ui.html
+http://public_ip:8080/swagger-ui.html
 
 
